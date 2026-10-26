@@ -1,0 +1,129 @@
+header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-color);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 16px 5%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.logo img {
+    border-radius: 50px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+
+.nav-links a .active {
+    color: var(--primary-color);
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background-color: var(--primary-color);
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.theme-toggle img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    color: var(--text-color);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.menu-toggle img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+span {
+    color: var(--text-color);
+}
+
+.mobile-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-theme img {
+    width: 22px;
+    height: 22px;
+}
